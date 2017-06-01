@@ -13,21 +13,25 @@ import Test from './Test'
 class App extends Component {
 
   static propTypes = {
-    app: PropTypes.object.isRequired
+    // NOTE: When this is React.PropTypes.object and an object is provided in mapStateToProps(), our "TestRequest" component functions correctly.
+    // initialized: PropTypes.object
+    initialized: PropTypes.bool
   }
   
   render() {
     return (
       <div>
-        <h1>App</h1>
+        <h1>Appe</h1>
         <Test />  
       </div>
     );
   }
 }
 
-const mapStateToProps = () => ({
-  app: { initialized: true }
+const mapStateToProps = () => ({  
+  // NOTE: as indicated above in propTypes, when initialized is an object, the "TestRequest" component functions correctly.
+  //initialized: { result: true }
+  initialized: true
 });
 
 export default connect(

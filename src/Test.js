@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import TestForm from './TestForm';
+import TestRequest from './TestRequest'
 
 class Test extends Component {
 
   static propTypes = {
-        user: PropTypes.object.isRequired
+        user: PropTypes.object.isRequired,        
     };
 
   handleSubmit = () => {
@@ -18,6 +19,7 @@ class Test extends Component {
         <div>
           <h2>Test Page</h2>
           <TestForm onSubmit={this.handleSubmit} />                
+          <TestRequest />
         </div>
       )
   }

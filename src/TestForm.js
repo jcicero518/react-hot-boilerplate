@@ -8,8 +8,8 @@ class TestForm extends React.Component {
         onSubmit: PropTypes.func.isRequired
     }
 
-    render() {
-        return (
+    render() {        
+        return (            
             <form onSubmit={this.props.onSubmit}>
                 <h3>Test Form</h3>
                 <Field name="email" component="input" type="text" placeholder="Enter some text here..." />                                
